@@ -14,10 +14,10 @@ function main() {
   result = lines.replace(/.voice-state\[data-reactid\*="(.+?)"\] .avatar/g, `li[class*="State"] img[src*="$1"]`);
 
   // .voice-statesをul[class*="States"]に置換します
-  result = lines.replace(/.voice-states|li.voice-state/g, `ul[class*="States"]`);
+  result = lines.replace(".voice-states", `ul[class*="States"]`);
 
   // li.voice-stateをli[class*="State"]に置換します
-  result = result.replaceAll(/.voice-state/g, `li[class*="State"]`);
+  result = result.replaceAll(/li.voice-state|.voice-state/g, `li[class*="States"]`);
 
   // .avatarをimg[class*="avatar"]に置換します
   result = result.replace(".avatar", `img[class*="avatar"]`);
