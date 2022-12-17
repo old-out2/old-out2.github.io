@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.ts"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-[#3D4451]">
+    <div class="container m-auto mt-10">
+      <h1 class="text-4xl text-white">Discordボイチャ CSS変更</h1>
+      <div class="grid grid-cols-2 gap-4 mt-2">
+        <textarea
+          class="form-control block w-full px-3 py-1.5 text-base font-normal text-white bg-[#3D4451] bg-clip-padding border border-solid border-white rounded transition ease-in-out m-0 focus:text-white focus:bg-[#3D4451] focus:border-blue-600 focus:outline-none"
+          id="before"
+          rows="20"
+          placeholder="変換前のテキストをこちらに入れてください"
+        ></textarea>
+        <textarea
+          class="form-control block w-full px-3 py-1.5 text-base font-normal text-white bg-[#3D4451] bg-clip-padding border border-solid border-white rounded transition ease-in-out m-0 focus:text-white focus:bg-[#3D4451] focus:border-blue-600 focus:outline-none"
+          id="after"
+          rows="20"
+          placeholder="変換後のテキストはこちらから出ます"
+        ></textarea>
+      </div>
+      <div class="text-center mt-6">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white text-xl font-bold py-4 px-6 rounded"
+          onclick="main()"
+        >
+          変換する
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
